@@ -13,3 +13,6 @@ variable "vnetname" {
 variable "subnet_name" {
   type = string
 }
+variable "ipaddress"{
+  type=string
+}
