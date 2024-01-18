@@ -30,3 +30,8 @@ variable "nicname" {
   type = string
   description = "Name for NIC"
 }
+# variable "storageaccountname" {
+#   type = string
+#   description = "Name for Storage Account"
+# }
+#No need name for Storage Account. Since, it will use random_id resource for assigning name in the file itself
