@@ -26,3 +26,7 @@ variable "nsgname" {
   type=string
   description = "Name for Network Security Group"
 }
+variable "nicname" {
+  type = string
+  description = "Name for NIC"
+}
