@@ -1,4 +1,4 @@
-resource "azurerm_linux_virtual_machine" "example" {
+resource "azurerm_linux_virtual_machine" "VM1" {
   name                = var.virtualMachineName
   resource_group_name = azurerm_resource_group.FirstResourceGroup.name
   location            = var.location
@@ -10,7 +10,7 @@ resource "azurerm_linux_virtual_machine" "example" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = tls_private_key.ssh-key.public_key_pem
+    public_key = tls_private_key.ssh-key.public_key_openssh
   }
 
   os_disk {
