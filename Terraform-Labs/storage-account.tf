@@ -5,7 +5,7 @@ resource "random_id" "randomID" {
   byte_length = 8
 }
 resource "azurerm_storage_account" "storage-account" {
-  name                     = "diag${ra}"
+  name                     = "diag${random_id.randomID}"
   resource_group_name      = azurerm_resource_group.FirstResourceGroup.name
   location                 = var.location
   account_tier             = "Standard"
