@@ -1,4 +1,4 @@
-resource "azurerm_linux_virtual_machine" "VM1" {
+resource "azurerm_linux_virtual_machine" "vm1" {
   name                = var.virtualMachineName
   resource_group_name = azurerm_resource_group.FirstResourceGroup.name
   location            = var.location
