@@ -1,5 +1,5 @@
 location="East US"
-resourceGroupName="MyFirstRG"
+resourceGroupName="MySecondRG"
 tags={
     environment="test"
 }
