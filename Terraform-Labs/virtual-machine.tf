@@ -1,5 +1,6 @@
 resource "azurerm_linux_virtual_machine" "vm1" {
-  name                = tolist(var.virtualMachineName)
+  count               = length(var.virtualMachineName)
+  name                = var.virtualMachineName[count.index]
   resource_group_name = azurerm_resource_group.FirstResourceGroup.name
   location            = var.location
   size                = "Standard_F2"
