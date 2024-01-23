@@ -5,7 +5,7 @@ tags={
 }
 vnetname = "myTerraformvnetname"
 subnet_name = "mysubnetname"
-ipaddress = "myIPaddress"
+ipaddress = ["myIPaddress","myIPaddress2","myIPaddress3"]
 nsgname = "myNSG"
 nicname = ["myNIC","myNIC2","myNIC3"]
 virtualMachineName = ["myLinuxVM","myLinuxVM2","myLinuxVM3"]
