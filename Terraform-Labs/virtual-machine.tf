@@ -1,5 +1,5 @@
 resource "azurerm_linux_virtual_machine" "vm1" {
-  name                = var.virtualMachineName
+  name                = list(var.virtualMachineName)
   resource_group_name = azurerm_resource_group.FirstResourceGroup.name
   location            = var.location
   size                = "Standard_F2"

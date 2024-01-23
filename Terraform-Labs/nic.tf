@@ -1,5 +1,5 @@
 resource "azurerm_network_interface" "myNIC" {
-  name                = var.nicname
+  name                = list(var.nicname)
   location            = var.location
   resource_group_name = azurerm_resource_group.FirstResourceGroup.name
 

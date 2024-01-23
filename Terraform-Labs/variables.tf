@@ -27,7 +27,7 @@ variable "nsgname" {
   description = "Name for Network Security Group"
 }
 variable "nicname" {
-  type = string
+  type = list(string)
   description = "Name for NIC"
 }
 # variable "storageaccountname" {
@@ -37,6 +37,6 @@ variable "nicname" {
 #No need name for Storage Account. Since, it will use random_id resource for assigning name in the file itself
 
 variable "virtualMachineName" {
-  type = string
+  type = list(string)
   description = "Name for Virtual Machine"
 }
