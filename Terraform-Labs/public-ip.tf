@@ -1,7 +1,7 @@
 resource "azurerm_public_ip" "example" {
   count = length(var.virtualMachineName)
   name                = "ip${count.index}"
-  resource_group_name = azurerm_resource_group.FirstResourceGroup.name
+  resource_group_name = azurerm_resource_group.SecondResourceGroup.name
   location            = var.location
   allocation_method   = "Dynamic"
 

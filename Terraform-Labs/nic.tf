@@ -2,7 +2,7 @@ resource "azurerm_network_interface" "myNIC" {
   count               = length(var.nicname)
   name                = (var.nicname[count.index])
   location            = var.location
-  resource_group_name = azurerm_resource_group.FirstResourceGroup.name
+  resource_group_name = azurerm_resource_group.SecondResourceGroup.name
 
   ip_configuration {
     name                          = "internal"
