@@ -1,5 +1,6 @@
 resource "azurerm_public_ip" "example" {
-  name                = var.ipaddress
+  count = length(var.ipaddress)
+  name                = var.ipaddress[count.index]
   resource_group_name = azurerm_resource_group.FirstResourceGroup.name
   location            = var.location
   allocation_method   = "Dynamic"
