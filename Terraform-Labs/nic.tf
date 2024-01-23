@@ -12,6 +12,6 @@ resource "azurerm_network_interface" "myNIC" {
   }
 }
 resource "azurerm_network_interface_security_group_association" "myNICSecurityGroupAssociation" {
-  network_interface_id          = azurerm_network_interface.myNIC.id
+  network_interface_id          = azurerm_network_interface.myNIC[count.index].id
   network_security_group_id = azurerm_network_security_group.myNSG.id
 }
